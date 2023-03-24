@@ -1,0 +1,23 @@
+[2023-03-22 03:25:25,447] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: etl_to_staging.trans_checkin_json manual__2023-03-22T03:24:49.750316+00:00 [queued]>
+[2023-03-22 03:25:25,468] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: etl_to_staging.trans_checkin_json manual__2023-03-22T03:24:49.750316+00:00 [queued]>
+[2023-03-22 03:25:25,468] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-22 03:25:25,469] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2023-03-22 03:25:25,469] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-22 03:25:25,500] {taskinstance.py:1262} INFO - Executing <Task(PythonOperator): trans_checkin_json> on 2023-03-22 03:24:49.750316+00:00
+[2023-03-22 03:25:25,506] {standard_task_runner.py:52} INFO - Started process 215 to run task
+[2023-03-22 03:25:25,510] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'etl_to_staging', 'trans_checkin_json', 'manual__2023-03-22T03:24:49.750316+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/etl_staging.py', '--cfg-path', '/tmp/tmppoj7fq1f', '--error-file', '/tmp/tmpuea68iyc']
+[2023-03-22 03:25:25,511] {standard_task_runner.py:77} INFO - Job 6: Subtask trans_checkin_json
+[2023-03-22 03:25:25,566] {logging_mixin.py:109} INFO - Running <TaskInstance: etl_to_staging.trans_checkin_json manual__2023-03-22T03:24:49.750316+00:00 [running]> on host 495f2f48b8c7
+[2023-03-22 03:25:25,643] {taskinstance.py:1414} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=etl_to_staging
+AIRFLOW_CTX_TASK_ID=trans_checkin_json
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-22T03:24:49.750316+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-22T03:24:49.750316+00:00
+[2023-03-22 03:25:40,812] {logging_mixin.py:109} INFO - Data berhasil disimpan ke json file
+[2023-03-22 03:25:40,873] {python.py:152} INFO - Done. Returned value was: None
+[2023-03-22 03:25:41,924] {taskinstance.py:1280} INFO - Marking task as SUCCESS. dag_id=etl_to_staging, task_id=trans_checkin_json, execution_date=20230322T032449, start_date=20230322T032525, end_date=20230322T032541
+[2023-03-22 03:25:42,473] {local_task_job.py:154} INFO - Task exited with return code 0
+[2023-03-22 03:25:42,813] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

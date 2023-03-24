@@ -1,0 +1,34 @@
+[2023-03-21 03:48:09,641] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: transform_etl.trans_csv manual__2023-03-21T03:48:08.323060+00:00 [queued]>
+[2023-03-21 03:48:09,654] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: transform_etl.trans_csv manual__2023-03-21T03:48:08.323060+00:00 [queued]>
+[2023-03-21 03:48:09,655] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-21 03:48:09,656] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2023-03-21 03:48:09,656] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-21 03:48:09,675] {taskinstance.py:1262} INFO - Executing <Task(PythonOperator): trans_csv> on 2023-03-21 03:48:08.323060+00:00
+[2023-03-21 03:48:09,679] {standard_task_runner.py:52} INFO - Started process 679 to run task
+[2023-03-21 03:48:09,681] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'transform_etl', 'trans_csv', 'manual__2023-03-21T03:48:08.323060+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpn4l0h0y7', '--error-file', '/tmp/tmpy55mdbv5']
+[2023-03-21 03:48:09,682] {standard_task_runner.py:77} INFO - Job 17: Subtask trans_csv
+[2023-03-21 03:48:09,722] {logging_mixin.py:109} INFO - Running <TaskInstance: transform_etl.trans_csv manual__2023-03-21T03:48:08.323060+00:00 [running]> on host 8d5c7b966855
+[2023-03-21 03:48:09,771] {taskinstance.py:1414} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=transform_etl
+AIRFLOW_CTX_TASK_ID=trans_csv
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-21T03:48:08.323060+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-21T03:48:08.323060+00:00
+[2023-03-21 03:48:09,934] {logging_mixin.py:109} INFO -        date    min   max  normal_min  normal_max
+0  19480906  105.0  61.0        98.7        76.1
+1  19480907  104.0  60.0        98.4        75.8
+2  19480908  103.0  64.0        98.0        75.4
+3  19480909  106.0  62.0        97.7        75.1
+4  19480910  106.0  61.0        97.3        74.7
+5  19480911  107.0  62.0        97.0        74.4
+6  19480912  108.0  66.0        96.6        74.0
+7  19480913  109.0  62.0        96.2        73.6
+8  19480914  106.0  62.0        95.8        73.2
+9  19480915  103.0  68.0        95.4        72.8
+[2023-03-21 03:48:10,087] {logging_mixin.py:109} INFO - Data berhasil disimpan ke csv file
+[2023-03-21 03:48:10,088] {python.py:152} INFO - Done. Returned value was: None
+[2023-03-21 03:48:10,099] {taskinstance.py:1280} INFO - Marking task as SUCCESS. dag_id=transform_etl, task_id=trans_csv, execution_date=20230321T034808, start_date=20230321T034809, end_date=20230321T034810
+[2023-03-21 03:48:10,135] {local_task_job.py:154} INFO - Task exited with return code 0
+[2023-03-21 03:48:10,278] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

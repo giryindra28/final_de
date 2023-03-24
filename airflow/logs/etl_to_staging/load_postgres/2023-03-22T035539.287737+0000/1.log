@@ -1,0 +1,22 @@
+[2023-03-22 04:00:50,946] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: etl_to_staging.load_postgres manual__2023-03-22T03:55:39.287737+00:00 [queued]>
+[2023-03-22 04:00:50,974] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: etl_to_staging.load_postgres manual__2023-03-22T03:55:39.287737+00:00 [queued]>
+[2023-03-22 04:00:50,975] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-22 04:00:50,975] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2023-03-22 04:00:50,976] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-22 04:00:51,008] {taskinstance.py:1262} INFO - Executing <Task(PythonOperator): load_postgres> on 2023-03-22 03:55:39.287737+00:00
+[2023-03-22 04:00:51,014] {standard_task_runner.py:52} INFO - Started process 181 to run task
+[2023-03-22 04:00:51,019] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'etl_to_staging', 'load_postgres', 'manual__2023-03-22T03:55:39.287737+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/etl_staging.py', '--cfg-path', '/tmp/tmprgc5rio3', '--error-file', '/tmp/tmp4qce1dui']
+[2023-03-22 04:00:51,020] {standard_task_runner.py:77} INFO - Job 7: Subtask load_postgres
+[2023-03-22 04:00:51,085] {logging_mixin.py:109} INFO - Running <TaskInstance: etl_to_staging.load_postgres manual__2023-03-22T03:55:39.287737+00:00 [running]> on host 3942ac1e1d5f
+[2023-03-22 04:00:51,166] {taskinstance.py:1414} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=etl_to_staging
+AIRFLOW_CTX_TASK_ID=load_postgres
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-22T03:55:39.287737+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-22T03:55:39.287737+00:00
+[2023-03-22 04:03:29,483] {python.py:152} INFO - Done. Returned value was: None
+[2023-03-22 04:03:29,500] {taskinstance.py:1280} INFO - Marking task as SUCCESS. dag_id=etl_to_staging, task_id=load_postgres, execution_date=20230322T035539, start_date=20230322T040050, end_date=20230322T040329
+[2023-03-22 04:03:29,615] {local_task_job.py:154} INFO - Task exited with return code 0
+[2023-03-22 04:03:29,670] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

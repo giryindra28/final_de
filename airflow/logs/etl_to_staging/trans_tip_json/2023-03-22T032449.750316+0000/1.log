@@ -1,0 +1,21 @@
+[2023-03-22 03:25:45,023] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: etl_to_staging.trans_tip_json manual__2023-03-22T03:24:49.750316+00:00 [queued]>
+[2023-03-22 03:25:45,065] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: etl_to_staging.trans_tip_json manual__2023-03-22T03:24:49.750316+00:00 [queued]>
+[2023-03-22 03:25:45,066] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-22 03:25:45,066] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2023-03-22 03:25:45,067] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-22 03:25:45,110] {taskinstance.py:1262} INFO - Executing <Task(PythonOperator): trans_tip_json> on 2023-03-22 03:24:49.750316+00:00
+[2023-03-22 03:25:45,121] {standard_task_runner.py:52} INFO - Started process 227 to run task
+[2023-03-22 03:25:45,126] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'etl_to_staging', 'trans_tip_json', 'manual__2023-03-22T03:24:49.750316+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/etl_staging.py', '--cfg-path', '/tmp/tmppnq114z_', '--error-file', '/tmp/tmp0ojy_67i']
+[2023-03-22 03:25:45,127] {standard_task_runner.py:77} INFO - Job 7: Subtask trans_tip_json
+[2023-03-22 03:25:45,219] {logging_mixin.py:109} INFO - Running <TaskInstance: etl_to_staging.trans_tip_json manual__2023-03-22T03:24:49.750316+00:00 [running]> on host 495f2f48b8c7
+[2023-03-22 03:25:45,303] {taskinstance.py:1414} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=etl_to_staging
+AIRFLOW_CTX_TASK_ID=trans_tip_json
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-22T03:24:49.750316+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-22T03:24:49.750316+00:00
+[2023-03-22 03:30:00,357] {local_task_job.py:154} INFO - Task exited with return code Negsignal.SIGKILL
+[2023-03-22 03:30:00,436] {taskinstance.py:1280} INFO - Marking task as FAILED. dag_id=etl_to_staging, task_id=trans_tip_json, execution_date=20230322T032449, start_date=20230322T032545, end_date=20230322T033000
+[2023-03-22 03:30:00,576] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

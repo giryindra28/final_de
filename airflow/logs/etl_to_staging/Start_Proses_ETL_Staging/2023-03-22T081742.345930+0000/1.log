@@ -1,0 +1,23 @@
+[2023-03-22 08:17:44,134] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: etl_to_staging.Start_Proses_ETL_Staging manual__2023-03-22T08:17:42.345930+00:00 [queued]>
+[2023-03-22 08:17:44,158] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: etl_to_staging.Start_Proses_ETL_Staging manual__2023-03-22T08:17:42.345930+00:00 [queued]>
+[2023-03-22 08:17:44,158] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-22 08:17:44,159] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2023-03-22 08:17:44,159] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-22 08:17:44,174] {taskinstance.py:1262} INFO - Executing <Task(PythonOperator): Start_Proses_ETL_Staging> on 2023-03-22 08:17:42.345930+00:00
+[2023-03-22 08:17:44,178] {standard_task_runner.py:52} INFO - Started process 119 to run task
+[2023-03-22 08:17:44,181] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'etl_to_staging', 'Start_Proses_ETL_Staging', 'manual__2023-03-22T08:17:42.345930+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/etl_staging.py', '--cfg-path', '/tmp/tmp_z9x1o_l', '--error-file', '/tmp/tmpnamfq0e5']
+[2023-03-22 08:17:44,182] {standard_task_runner.py:77} INFO - Job 8: Subtask Start_Proses_ETL_Staging
+[2023-03-22 08:17:44,225] {logging_mixin.py:109} INFO - Running <TaskInstance: etl_to_staging.Start_Proses_ETL_Staging manual__2023-03-22T08:17:42.345930+00:00 [running]> on host 2bbf1c230888
+[2023-03-22 08:17:44,279] {taskinstance.py:1414} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=etl_to_staging
+AIRFLOW_CTX_TASK_ID=Start_Proses_ETL_Staging
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-22T08:17:42.345930+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-22T08:17:42.345930+00:00
+[2023-03-22 08:17:44,280] {logging_mixin.py:109} INFO - ETL Dimulai
+[2023-03-22 08:17:44,281] {python.py:152} INFO - Done. Returned value was: None
+[2023-03-22 08:17:44,293] {taskinstance.py:1280} INFO - Marking task as SUCCESS. dag_id=etl_to_staging, task_id=Start_Proses_ETL_Staging, execution_date=20230322T081742, start_date=20230322T081744, end_date=20230322T081744
+[2023-03-22 08:17:44,313] {local_task_job.py:154} INFO - Task exited with return code 0
+[2023-03-22 08:17:44,380] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

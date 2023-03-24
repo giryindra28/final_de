@@ -1,0 +1,23 @@
+[2023-03-22 07:54:15,414] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: load_to_datamart.sukses_Proses_Load_Datamart manual__2023-03-22T07:54:02.325409+00:00 [queued]>
+[2023-03-22 07:54:15,465] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: load_to_datamart.sukses_Proses_Load_Datamart manual__2023-03-22T07:54:02.325409+00:00 [queued]>
+[2023-03-22 07:54:15,466] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-22 07:54:15,467] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2023-03-22 07:54:15,470] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-22 07:54:15,497] {taskinstance.py:1262} INFO - Executing <Task(PythonOperator): sukses_Proses_Load_Datamart> on 2023-03-22 07:54:02.325409+00:00
+[2023-03-22 07:54:15,503] {standard_task_runner.py:52} INFO - Started process 313 to run task
+[2023-03-22 07:54:15,509] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'load_to_datamart', 'sukses_Proses_Load_Datamart', 'manual__2023-03-22T07:54:02.325409+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/mart_layer.py', '--cfg-path', '/tmp/tmpi1v1anef', '--error-file', '/tmp/tmpfkk3bvdb']
+[2023-03-22 07:54:15,511] {standard_task_runner.py:77} INFO - Job 11: Subtask sukses_Proses_Load_Datamart
+[2023-03-22 07:54:15,607] {logging_mixin.py:109} INFO - Running <TaskInstance: load_to_datamart.sukses_Proses_Load_Datamart manual__2023-03-22T07:54:02.325409+00:00 [running]> on host c456fd334a3e
+[2023-03-22 07:54:15,705] {taskinstance.py:1414} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=load_to_datamart
+AIRFLOW_CTX_TASK_ID=sukses_Proses_Load_Datamart
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-22T07:54:02.325409+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-22T07:54:02.325409+00:00
+[2023-03-22 07:54:15,706] {logging_mixin.py:109} INFO - Etl Sukses Dilakukan
+[2023-03-22 07:54:15,707] {python.py:152} INFO - Done. Returned value was: None
+[2023-03-22 07:54:15,732] {taskinstance.py:1280} INFO - Marking task as SUCCESS. dag_id=load_to_datamart, task_id=sukses_Proses_Load_Datamart, execution_date=20230322T075402, start_date=20230322T075415, end_date=20230322T075415
+[2023-03-22 07:54:15,803] {local_task_job.py:154} INFO - Task exited with return code 0
+[2023-03-22 07:54:15,866] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

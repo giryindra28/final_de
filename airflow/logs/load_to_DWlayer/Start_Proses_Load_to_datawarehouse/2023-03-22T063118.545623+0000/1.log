@@ -1,0 +1,23 @@
+[2023-03-22 06:31:20,545] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: load_to_DWlayer.Start_Proses_Load_to_datawarehouse manual__2023-03-22T06:31:18.545623+00:00 [queued]>
+[2023-03-22 06:31:20,593] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: load_to_DWlayer.Start_Proses_Load_to_datawarehouse manual__2023-03-22T06:31:18.545623+00:00 [queued]>
+[2023-03-22 06:31:20,594] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-22 06:31:20,594] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2023-03-22 06:31:20,595] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-22 06:31:20,630] {taskinstance.py:1262} INFO - Executing <Task(PythonOperator): Start_Proses_Load_to_datawarehouse> on 2023-03-22 06:31:18.545623+00:00
+[2023-03-22 06:31:20,639] {standard_task_runner.py:52} INFO - Started process 1698 to run task
+[2023-03-22 06:31:20,643] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'load_to_DWlayer', 'Start_Proses_Load_to_datawarehouse', 'manual__2023-03-22T06:31:18.545623+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/etl_warehouse.py', '--cfg-path', '/tmp/tmppe9hl9m8', '--error-file', '/tmp/tmp60bg0ez0']
+[2023-03-22 06:31:20,644] {standard_task_runner.py:77} INFO - Job 16: Subtask Start_Proses_Load_to_datawarehouse
+[2023-03-22 06:31:20,726] {logging_mixin.py:109} INFO - Running <TaskInstance: load_to_DWlayer.Start_Proses_Load_to_datawarehouse manual__2023-03-22T06:31:18.545623+00:00 [running]> on host 33f6658fc35a
+[2023-03-22 06:31:20,815] {taskinstance.py:1414} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=load_to_DWlayer
+AIRFLOW_CTX_TASK_ID=Start_Proses_Load_to_datawarehouse
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-22T06:31:18.545623+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-22T06:31:18.545623+00:00
+[2023-03-22 06:31:20,817] {logging_mixin.py:109} INFO - ETL Dimulai
+[2023-03-22 06:31:20,817] {python.py:152} INFO - Done. Returned value was: None
+[2023-03-22 06:31:20,837] {taskinstance.py:1280} INFO - Marking task as SUCCESS. dag_id=load_to_DWlayer, task_id=Start_Proses_Load_to_datawarehouse, execution_date=20230322T063118, start_date=20230322T063120, end_date=20230322T063120
+[2023-03-22 06:31:20,898] {local_task_job.py:154} INFO - Task exited with return code 0
+[2023-03-22 06:31:20,969] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

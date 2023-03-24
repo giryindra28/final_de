@@ -1,0 +1,23 @@
+[2023-03-21 03:41:54,413] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: transform_etl.sukses_Proses_ETL manual__2023-03-21T03:40:25.451249+00:00 [queued]>
+[2023-03-21 03:41:54,426] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: transform_etl.sukses_Proses_ETL manual__2023-03-21T03:40:25.451249+00:00 [queued]>
+[2023-03-21 03:41:54,426] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-21 03:41:54,426] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2023-03-21 03:41:54,427] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-21 03:41:54,444] {taskinstance.py:1262} INFO - Executing <Task(PythonOperator): sukses_Proses_ETL> on 2023-03-21 03:40:25.451249+00:00
+[2023-03-21 03:41:54,449] {standard_task_runner.py:52} INFO - Started process 424 to run task
+[2023-03-21 03:41:54,452] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'transform_etl', 'sukses_Proses_ETL', 'manual__2023-03-21T03:40:25.451249+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpgyg6xnlg', '--error-file', '/tmp/tmp7jl9s6jh']
+[2023-03-21 03:41:54,453] {standard_task_runner.py:77} INFO - Job 16: Subtask sukses_Proses_ETL
+[2023-03-21 03:41:54,494] {logging_mixin.py:109} INFO - Running <TaskInstance: transform_etl.sukses_Proses_ETL manual__2023-03-21T03:40:25.451249+00:00 [running]> on host 8d5c7b966855
+[2023-03-21 03:41:54,540] {taskinstance.py:1414} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=transform_etl
+AIRFLOW_CTX_TASK_ID=sukses_Proses_ETL
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-21T03:40:25.451249+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-21T03:40:25.451249+00:00
+[2023-03-21 03:41:54,541] {logging_mixin.py:109} INFO - Etl Sukses Dilakukan
+[2023-03-21 03:41:54,541] {python.py:152} INFO - Done. Returned value was: None
+[2023-03-21 03:41:54,553] {taskinstance.py:1280} INFO - Marking task as SUCCESS. dag_id=transform_etl, task_id=sukses_Proses_ETL, execution_date=20230321T034025, start_date=20230321T034154, end_date=20230321T034154
+[2023-03-21 03:41:54,584] {local_task_job.py:154} INFO - Task exited with return code 0
+[2023-03-21 03:41:54,614] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

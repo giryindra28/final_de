@@ -1,0 +1,23 @@
+[2023-03-21 04:30:43,680] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: transform_etl.trans_csv manual__2023-03-21T04:30:41.137025+00:00 [queued]>
+[2023-03-21 04:30:43,711] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: transform_etl.trans_csv manual__2023-03-21T04:30:41.137025+00:00 [queued]>
+[2023-03-21 04:30:43,712] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-21 04:30:43,712] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2023-03-21 04:30:43,713] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-21 04:30:43,732] {taskinstance.py:1262} INFO - Executing <Task(PythonOperator): trans_csv> on 2023-03-21 04:30:41.137025+00:00
+[2023-03-21 04:30:43,737] {standard_task_runner.py:52} INFO - Started process 121 to run task
+[2023-03-21 04:30:43,752] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'transform_etl', 'trans_csv', 'manual__2023-03-21T04:30:41.137025+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpa1wlgznw', '--error-file', '/tmp/tmpg2wct29e']
+[2023-03-21 04:30:43,754] {standard_task_runner.py:77} INFO - Job 30: Subtask trans_csv
+[2023-03-21 04:30:43,818] {logging_mixin.py:109} INFO - Running <TaskInstance: transform_etl.trans_csv manual__2023-03-21T04:30:41.137025+00:00 [running]> on host 8d5c7b966855
+[2023-03-21 04:30:43,886] {taskinstance.py:1414} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=transform_etl
+AIRFLOW_CTX_TASK_ID=trans_csv
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-21T04:30:41.137025+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-21T04:30:41.137025+00:00
+[2023-03-21 04:30:43,888] {logging_mixin.py:109} INFO - Data berhasil disimpan ke csv file
+[2023-03-21 04:30:43,889] {python.py:152} INFO - Done. Returned value was: None
+[2023-03-21 04:30:43,906] {taskinstance.py:1280} INFO - Marking task as SUCCESS. dag_id=transform_etl, task_id=trans_csv, execution_date=20230321T043041, start_date=20230321T043043, end_date=20230321T043043
+[2023-03-21 04:30:43,957] {local_task_job.py:154} INFO - Task exited with return code 0
+[2023-03-21 04:30:44,020] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

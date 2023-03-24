@@ -1,0 +1,36 @@
+[2023-03-21 03:40:28,980] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: transform_etl.trans_json manual__2023-03-21T03:40:25.451249+00:00 [queued]>
+[2023-03-21 03:40:29,259] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: transform_etl.trans_json manual__2023-03-21T03:40:25.451249+00:00 [queued]>
+[2023-03-21 03:40:29,259] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-21 03:40:29,260] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2023-03-21 03:40:29,260] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-21 03:40:29,393] {taskinstance.py:1262} INFO - Executing <Task(PythonOperator): trans_json> on 2023-03-21 03:40:25.451249+00:00
+[2023-03-21 03:40:29,397] {standard_task_runner.py:52} INFO - Started process 370 to run task
+[2023-03-21 03:40:29,400] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'transform_etl', 'trans_json', 'manual__2023-03-21T03:40:25.451249+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpu5gvqqxv', '--error-file', '/tmp/tmp_7do3g5u']
+[2023-03-21 03:40:29,401] {standard_task_runner.py:77} INFO - Job 14: Subtask trans_json
+[2023-03-21 03:40:29,664] {logging_mixin.py:109} INFO - Running <TaskInstance: transform_etl.trans_json manual__2023-03-21T03:40:25.451249+00:00 [running]> on host 8d5c7b966855
+[2023-03-21 03:40:29,723] {taskinstance.py:1414} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=transform_etl
+AIRFLOW_CTX_TASK_ID=trans_json
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-21T03:40:25.451249+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-21T03:40:25.451249+00:00
+[2023-03-21 03:40:36,487] {logging_mixin.py:109} INFO -               business_id  ...                                              hours
+0  Pns2l4eNsfO8kk83dixA6A  ...                                               None
+1  mpf3x-BjTdTEA3yCZrAYPw  ...  {'Monday': '0:0-0:0', 'Tuesday': '8:0-18:30', ...
+2  tUFrWirKiKi_TAnsVWINQQ  ...  {'Monday': '8:0-22:0', 'Tuesday': '8:0-22:0', ...
+3  MTSW4McQd7CbVtyjqoe9mw  ...  {'Monday': '7:0-20:0', 'Tuesday': '7:0-20:0', ...
+4  mWMc6_wTdE0EUBKIGXDVfA  ...  {'Wednesday': '14:0-22:0', 'Thursday': '16:0-2...
+5  CF33F8-E6oudUQ46HnavjQ  ...  {'Monday': '0:0-0:0', 'Tuesday': '6:0-22:0', '...
+6  n_0UpQx1hsNbnPUSlodU8w  ...  {'Monday': '0:0-0:0', 'Tuesday': '10:0-18:0', ...
+7  qkRM_2X51Yqxk3btlwAQIg  ...  {'Monday': '9:0-17:0', 'Tuesday': '9:0-17:0', ...
+8  k0hlBqXX-Bt0vf1op7Jr1w  ...                                               None
+9  bBDDEgkFA1Otx9Lfe7BZUQ  ...  {'Monday': '0:0-0:0', 'Tuesday': '6:0-21:0', '...
+
+[10 rows x 14 columns]
+[2023-03-21 03:40:44,050] {logging_mixin.py:109} INFO - Data berhasil disimpan ke json file
+[2023-03-21 03:40:44,548] {python.py:152} INFO - Done. Returned value was: None
+[2023-03-21 03:40:44,577] {taskinstance.py:1280} INFO - Marking task as SUCCESS. dag_id=transform_etl, task_id=trans_json, execution_date=20230321T034025, start_date=20230321T034028, end_date=20230321T034044
+[2023-03-21 03:40:44,647] {local_task_job.py:154} INFO - Task exited with return code 0
+[2023-03-21 03:40:44,687] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

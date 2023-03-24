@@ -1,0 +1,23 @@
+[2023-03-22 03:24:56,849] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: etl_to_staging.trans_csv manual__2023-03-22T03:24:49.750316+00:00 [queued]>
+[2023-03-22 03:24:56,935] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: etl_to_staging.trans_csv manual__2023-03-22T03:24:49.750316+00:00 [queued]>
+[2023-03-22 03:24:56,936] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-22 03:24:56,936] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2023-03-22 03:24:56,937] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-22 03:24:57,029] {taskinstance.py:1262} INFO - Executing <Task(PythonOperator): trans_csv> on 2023-03-22 03:24:49.750316+00:00
+[2023-03-22 03:24:57,034] {standard_task_runner.py:52} INFO - Started process 191 to run task
+[2023-03-22 03:24:57,037] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'etl_to_staging', 'trans_csv', 'manual__2023-03-22T03:24:49.750316+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/etl_staging.py', '--cfg-path', '/tmp/tmphbnxnym_', '--error-file', '/tmp/tmpg3lbhlcl']
+[2023-03-22 03:24:57,038] {standard_task_runner.py:77} INFO - Job 4: Subtask trans_csv
+[2023-03-22 03:24:57,164] {logging_mixin.py:109} INFO - Running <TaskInstance: etl_to_staging.trans_csv manual__2023-03-22T03:24:49.750316+00:00 [running]> on host 495f2f48b8c7
+[2023-03-22 03:24:57,442] {taskinstance.py:1414} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=etl_to_staging
+AIRFLOW_CTX_TASK_ID=trans_csv
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-22T03:24:49.750316+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-22T03:24:49.750316+00:00
+[2023-03-22 03:24:58,456] {logging_mixin.py:109} INFO - Data berhasil disimpan ke csv file
+[2023-03-22 03:24:58,460] {python.py:152} INFO - Done. Returned value was: None
+[2023-03-22 03:24:58,473] {taskinstance.py:1280} INFO - Marking task as SUCCESS. dag_id=etl_to_staging, task_id=trans_csv, execution_date=20230322T032449, start_date=20230322T032456, end_date=20230322T032458
+[2023-03-22 03:24:58,535] {local_task_job.py:154} INFO - Task exited with return code 0
+[2023-03-22 03:24:58,577] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

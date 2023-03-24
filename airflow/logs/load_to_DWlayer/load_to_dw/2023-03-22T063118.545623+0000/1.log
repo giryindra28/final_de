@@ -1,0 +1,89 @@
+[2023-03-22 06:31:22,245] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: load_to_DWlayer.load_to_dw manual__2023-03-22T06:31:18.545623+00:00 [queued]>
+[2023-03-22 06:31:22,302] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: load_to_DWlayer.load_to_dw manual__2023-03-22T06:31:18.545623+00:00 [queued]>
+[2023-03-22 06:31:22,302] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-22 06:31:22,303] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2023-03-22 06:31:22,304] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-22 06:31:22,330] {taskinstance.py:1262} INFO - Executing <Task(PythonOperator): load_to_dw> on 2023-03-22 06:31:18.545623+00:00
+[2023-03-22 06:31:22,336] {standard_task_runner.py:52} INFO - Started process 1700 to run task
+[2023-03-22 06:31:22,341] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'load_to_DWlayer', 'load_to_dw', 'manual__2023-03-22T06:31:18.545623+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/etl_warehouse.py', '--cfg-path', '/tmp/tmphlc9ecct', '--error-file', '/tmp/tmpv3nipbuo']
+[2023-03-22 06:31:22,342] {standard_task_runner.py:77} INFO - Job 17: Subtask load_to_dw
+[2023-03-22 06:31:22,413] {logging_mixin.py:109} INFO - Running <TaskInstance: load_to_DWlayer.load_to_dw manual__2023-03-22T06:31:18.545623+00:00 [running]> on host 33f6658fc35a
+[2023-03-22 06:31:22,501] {taskinstance.py:1414} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=load_to_DWlayer
+AIRFLOW_CTX_TASK_ID=load_to_dw
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-22T06:31:18.545623+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-22T06:31:18.545623+00:00
+[2023-03-22 06:31:44,245] {taskinstance.py:1686} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1324, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1443, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1499, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 151, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 162, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/script/main_dw.py", line 25, in load_dw
+    df_store = pd.read_csv("/opt/airflow/data_dim_fact/dim_store.csv", sep=',')
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/parsers.py", line 688, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/parsers.py", line 454, in _read
+    parser = TextFileReader(fp_or_buf, **kwds)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/parsers.py", line 948, in __init__
+    self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/parsers.py", line 1180, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/parsers.py", line 2010, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 382, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 674, in pandas._libs.parsers.TextReader._setup_parser_source
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/data_dim_fact/dim_store.csv'
+[2023-03-22 06:31:44,322] {taskinstance.py:1280} INFO - Marking task as FAILED. dag_id=load_to_DWlayer, task_id=load_to_dw, execution_date=20230322T063118, start_date=20230322T063122, end_date=20230322T063144
+[2023-03-22 06:31:44,394] {standard_task_runner.py:91} ERROR - Failed to execute job 17 for task load_to_dw
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/commands/task_command.py", line 292, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/commands/task_command.py", line 184, in _run_raw_task
+    error_file=args.error_file,
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1324, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1443, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1499, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 151, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 162, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/script/main_dw.py", line 25, in load_dw
+    df_store = pd.read_csv("/opt/airflow/data_dim_fact/dim_store.csv", sep=',')
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/parsers.py", line 688, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/parsers.py", line 454, in _read
+    parser = TextFileReader(fp_or_buf, **kwds)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/parsers.py", line 948, in __init__
+    self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/parsers.py", line 1180, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/io/parsers.py", line 2010, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 382, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 674, in pandas._libs.parsers.TextReader._setup_parser_source
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/data_dim_fact/dim_store.csv'
+[2023-03-22 06:31:44,446] {local_task_job.py:154} INFO - Task exited with return code 1
+[2023-03-22 06:31:44,572] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
